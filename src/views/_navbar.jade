@@ -1,0 +1,27 @@
+.off-canvas-wrap(data-offcanvas)
+  .inner-wrap
+    nav.tab-bar
+      section.left-small
+        a.left-off-canvas-toggle.menu-icon(href="#menu")
+          span
+
+      section.middle.tab-bar-section
+        h1.title Meet Me in Venice
+
+    aside.left-off-canvas-menu
+      ul.off-canvas-list
+        li
+          label Suzanne Ma
+        li
+          a(href="#about") About
+        li
+          a(href="#blog") Blog
+        li
+          a(href="#published") Published work
+        li
+          a(href="#events") Events
+
+    section.main-section
+      include main
+
+    a.exit-off-canvas

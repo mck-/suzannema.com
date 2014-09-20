@@ -9,8 +9,9 @@ html(lang='en-us')
     // bower:css
     // endbower
     link(rel='stylesheet', href='./css/main.css')
-  body(ng-app='app')
-    div.site-wrapper(ui-view)
+  body
+    include views/_navbar
+
     // bower:js
     // endbower
     script(src='./js/app.js')
