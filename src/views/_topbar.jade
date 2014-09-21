@@ -1,16 +1,16 @@
-.fixed.show-for-medium-up
-  nav.top-bar
+div.show-for-medium-up(data-magellan-expedition="fixed")
+  nav.top-bar(data-topbar)
     ul.title-area
       li.name
         h1 Suzanne Ma
 
     section.top-bar-section
       ul.right
-        li
+        li(data-magellan-arrival="about")
           a(href="#about") About
-        li
-          a(href="#blog") Blog
-        li
+        li(data-magellan-arrival="published")
           a(href="#published") Published work
-        li
+        li(data-magellan-arrival="events")
           a(href="#events") Events
+        li(data-magellan-arrival="blog")
+          a(href="#blog") Blog

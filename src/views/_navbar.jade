@@ -1,6 +1,6 @@
 .off-canvas-wrap(data-offcanvas)
   .inner-wrap
-    nav.tab-bar
+    nav.tab-bar.show-for-small-only
       section.left-small
         a.left-off-canvas-toggle.menu-icon(href="#menu")
           span
@@ -15,11 +15,11 @@
         li
           a(href="#about") About
         li
-          a(href="#blog") Blog
-        li
           a(href="#published") Published work
         li
           a(href="#events") Events
+        li
+          a(href="#blog") Blog
 
     section.main-section
       include _topbar
