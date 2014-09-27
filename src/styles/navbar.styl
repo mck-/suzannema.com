@@ -1,0 +1,68 @@
+.tab-bar
+  background-color white
+
+  .menu-icon
+    background-color color_red
+
+    span::after
+      box-shadow 0 0 1px 2px white, 0 9px 1px 2px white, 0 18px 1px 2px white
+
+  img
+    width 120px
+
+.top-bar
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 80px
+  background-color white
+
+  .inner
+    width 100%
+    margin 0 auto
+    max-width 62.5rem
+
+  .name
+    display flex
+    align-items center
+    height 80px
+    margin 0 5vw
+
+  .top-bar-section
+    margin-right 5vw
+    li
+      display flex
+      align-items center
+      margin 0 1vw
+      height: 80px
+      background-color white !important
+
+      a
+        position relative
+        padding 0 !important
+        line-height 20px !important
+        font-family Serlio
+        font-size h2_size
+        color font_color !important
+        background-color white !important
+        text-decoration none
+
+      a:hover
+        color color_red !important
+
+      a:before
+        content ""
+        position absolute
+        width 100%
+        height 2px
+        bottom 0
+        left 0
+        background-color color_red
+        visibility hidden
+        transform scaleX(0)
+        transition all 0.3s ease-in-out 0s
+
+      a:hover:before
+        visibility visible
+        transform scaleX(1)
