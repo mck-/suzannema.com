@@ -4,15 +4,27 @@
   color font_color
 
 h1
+  margin-top 16px
   font-family Serlio
   font-size h1_size
+  font-weight bold
+  @media (max-width:480px)
+    font-size h1_size_m
+
+  &.title
+    margin-top 36px
+    background url("../images/redline.png") no-repeat center bottom
 
 h2
   font-family Serlio
   font-size h2_size
+  @media (max-width:480px)
+    font-size h2_size_m
 
 // Body text
 
 p
   font-family Gamma
   font-size p_size
+  @media (max-width:480px)
+    font-size p_size_m

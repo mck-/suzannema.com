@@ -1,0 +1,36 @@
+.book
+  @media all and (max-width:1024px)
+    margin 0 auto
+    max-width 50%
+  @media all and (min-width:1024px)
+    position absolute
+    z-index 6
+    left 60px
+    top 30px
+
+.red-bar
+  position relative
+  background-color color_red
+  padding 38px 0 16px
+
+  p
+    line-height 2
+    color white
+
+  .button
+    font-family Serlio
+    font-size 25px
+    padding 10px 0 2px 0
+    width 220px
+    background-color color_red
+    border 3px solid white
+
+.red-bar:before
+  content ""
+  position absolute
+  top 0
+  bottom 0
+  left -8888px
+  right 0
+  border-left 8888px solid color_red
+  box-shadow 8888px 0 0 color_red
