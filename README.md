@@ -1,5 +1,7 @@
 <a href="https://zenhub.io"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png" height="18px"></a>
 
+# [Meet Me in Venice](http://suzannema.com)
+
 ## Zenbase-angular
 
 Yet another Angular boilerplate. Why? Why not! Boilerplates come in many flavours. Zenbase is intended to be light and flexible, but with a few opinionated choices up-front.
@@ -34,3 +36,4 @@ bower install
 - `gulp` Compile your source into `/public` and start a local server
 - `gulp build` Build your app into `/dist`
 - `gulp serveDist` Start a local server and serve up what you just built
+- `gulp deploy` Deploy `/dist` to GH pages
