@@ -7,6 +7,7 @@ module.exports =
   publicDirJS: './public/js/'
   publicDirCSS: './public/css/'
   images: './public/images/**/*'
+  fonts: './public/fonts/**/*'
   distDir: './dist'
   revDir: './rev'
   deploy: './dist/**/*'

@@ -60,10 +60,11 @@ gulp.task 'copyBower', ->
 
 gulp.task 'images', ->
   gulp.src paths.images
-    .pipe plgn.imagemin
-      progressive: true
-      optimizationLevel: 7
     .pipe gulp.dest "#{paths.distDir}/images/"
+
+gulp.task 'fonts', ->
+  gulp.src paths.fonts
+    .pipe gulp.dest "#{paths.distDir}/fonts/"
 
 gulp.task 'serveDist', ->
   gulp.src paths.distDir
@@ -73,4 +74,4 @@ gulp.task 'serveDist', ->
 gulp.task 'minAll', ['minJS', 'minHTML', 'minCSS', 'revision']
 
 gulp.task 'build', ['removeDist', 'removeRev'], ->
-  gulp.start 'minAll', 'copyBower', 'images'
+  gulp.start 'minAll', 'copyBower', 'images', 'fonts'
