@@ -1,3 +1,21 @@
+mixin event(day, month, title, location, exactTime)
+  .row
+    .small-12.small-centered.large-uncentered.large-6
+      .date
+        .day= day
+        .month= month
+      .event-title
+        h2= title
+        .location= location
+  .row
+    .small-9.small-centered.large-uncentered.large-5.large-push-6.columns.text-center
+      img.map(src="./images/map.png")
+      .show-for-medium-up
+        h2= exactTime
+
+    .small-10.small-centered.large-uncentered.large-5.large-pull-4.columns
+      block
+
 .white-bg
   a(name="events")
   .section-padding
@@ -6,28 +24,8 @@
         .text-center
           h1 Events
 
-    .row
-      .small-12.small-centered.large-uncentered.large-6
-        .date
-          .day 08
-          .month March
-        .event-title
-          h2 Meet Me In Venice Book Launch
-          .location Sun Yat-Sen Classical Chinese Garden
-
-    .row
-      .small-9.small-centered.large-uncentered.large-5.large-push-6.columns.text-center
-        img.map(src="./images/map.png")
-
-        .show-for-medium-up
-          h2.title Sunday March 8, 2015, 2 p.m. PT
-
-
-      .small-10.small-centered.large-uncentered.large-5.large-pull-4.columns
-        p A party to celebrate the launch of Meet Me in Venice! Want to know what it takes to become a published author? Curious to know more about the Chinese in Italy?
-
-        p Come listen to Suzanne speak about her amazing five-year journey tracking migrants from China to Italy, and be the first to see an exclusive exhibition of Suzanne’s photographs on Chinese immigrant life on display in the Hall of One Hundred Rivers.
-
-        p Light refreshments will be served.
-
-        p RSVP: <a href="mailto:book@suzannema.com">book@suzannema.com</a>
+    +event("08", "March", "Meet Me In Venice Book Launch", "Sun Yat-Sen Classical Chinese Garden", "Sunday March 8, 2015, 2 p.m. PT")
+      p A party to celebrate the launch of Meet Me in Venice! Want to know what it takes to become a published author? Curious to know more about the Chinese in Italy?
+      p Come listen to Suzanne speak about her amazing five-year journey tracking migrants from China to Italy, and be the first to see an exclusive exhibition of Suzanne’s photographs on Chinese immigrant life on display in the Hall of One Hundred Rivers.
+      p Light refreshments will be served.
+      p RSVP: <a href="mailto:book@suzannema.com">book@suzannema.com</a>
