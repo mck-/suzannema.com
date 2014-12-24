@@ -1,4 +1,4 @@
-mixin event(day, month, title, location, exactTime)
+mixin event(day, month, title, location, exactTime, mapID)
   .row.event
     .small-12.small-centered.large-uncentered.large-6
       .date
@@ -9,7 +9,7 @@ mixin event(day, month, title, location, exactTime)
         .location= location
   .row
     .small-9.small-centered.large-uncentered.large-5.large-push-6.columns.text-center
-      img.map(src="./images/map.png")
+      iframe.map(frameBorder='0', src="https://a.tiles.mapbox.com/v4/mck-.#{mapID}/attribution.html?access_token=pk.eyJ1IjoibWNrLSIsImEiOiJRdG9HWTVVIn0.IzrqLZSvEp_M_DpwQWIJdA")
       .show-for-medium-up
         h2= exactTime
 
@@ -24,15 +24,15 @@ mixin event(day, month, title, location, exactTime)
         .text-center
           h1 Events
 
-    +event("08", "March", "Book Launch", "Sun Yat-Sen Classical Chinese Garden", "Sunday March 8, 2015, 2 p.m. PT")
+    +event("08", "March", "Book Launch", "Sun Yat-Sen Classical Chinese Garden", "Sunday March 8, 2015, 2 p.m. PT", "kij7cjpb")
       p A party to celebrate the launch of Meet Me in Venice! Want to know what it takes to become a published author? Curious to know more about the Chinese in Italy?
       p Come listen to Suzanne speak about her amazing five-year journey tracking migrants from China to Italy, and be the first to see an exclusive exhibition of Suzanne’s photographs on Chinese immigrant life on display in the Hall of One Hundred Rivers.
       p Light refreshments will be served.
       p RSVP: <a href="mailto:book@suzannema.com">book@suzannema.com</a>
 
-    +event("02-30", "March", "Photo Exhibition", "Sun Yat-Sen Classical Chinese Garden", "From March 2 to March 30, 2015")
+    +event("02-30", "March", "Photo Exhibition", "Sun Yat-Sen Classical Chinese Garden", "From March 2 to March 30, 2015", "kij7cjpb")
       p In this intimate photo exhibition, journalist and author Suzanne Ma gives us a rare and exclusive behind-the-scenes look at the Chinese immigrant experience in Europe.
       p The photos, taken over the past five years, brings us to a town in eastern China with a remarkable 300-year history of migration to the West. From there, we follow the town's migrants on their journey to Europe's factories, kitchens and farms.
 
-    +event("27", "February", "TEDx Delft 2015", "TU Delft, The Netherlands", "Friday February 27, 2015, 2 p.m. CET+1")
+    +event("27", "February", "TEDx Delft 2015", "TU Delft, The Netherlands", "Friday February 27, 2015, 2 p.m. CET+1", "hk74pcik")
       p In her first ever TEDtalk - <i>Newcomers in the Old World</i> - Suzanne Ma encourages us not only to welcome newcomers, but to take every opportunity to  <i>become</i> newcomers ourselves.
