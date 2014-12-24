@@ -1,0 +1,54 @@
+.event
+  padding 36px 0
+
+.location
+  color grey
+  margin-top -16px
+
+.date
+  display inline-block
+  background-color color_red
+  border-radius 16px
+  text-align center
+  width 18%
+  @media (max-width:480px)
+    width 20%
+    margin-left 8px
+
+  .day, .month
+    color white
+    font-family Serlio
+
+  .day
+    padding-top 10px
+    font-size 36px
+    @media (max-width:480px)
+      font-size 25px
+      padding-bottom 5px
+
+  .month
+    font-size 16px
+    margin -12px 5px 5px
+    @media (max-width:480px)
+      font-size 13px
+
+.event-title
+  display inline-block
+  margin-left 10px
+  margin-bottom 20px
+  @media (max-width:480px)
+    h2
+      font-size 16px
+    font-size 12px
+
+.map
+  .leaflet-control-attribution
+    display none
+
+  margin-bottom 10px
+  width 300px
+  height 300px
+
+  @media (max-width:480px)
+    width 200px
+    height 200px
