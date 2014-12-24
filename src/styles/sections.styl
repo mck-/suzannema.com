@@ -10,8 +10,11 @@
   left 0
   height 100%
   width 100%
-  background url('../images/bg_venice.png') no-repeat center center fixed
-  background-size cover
+  @media (min-width: 768px)
+    background url('../images/bg_venice.png') no-repeat center center fixed
+    background-size cover
+  @media (max-width: 768px)
+    background-color color_grey
 
 .white-bg
   position relative
