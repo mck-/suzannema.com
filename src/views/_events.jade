@@ -1,4 +1,4 @@
-mixin event(day, month, title, location, exactTime, mapID)
+mixin event(day, month, title, location, exactTime, mapID, zoom, lat, lng)
   .row.event.medium-center
     .small-12.small-centered.large-uncentered.large-6
       .date
@@ -9,7 +9,7 @@ mixin event(day, month, title, location, exactTime, mapID)
         .location= location
   .row
     .small-9.small-centered.large-uncentered.large-5.large-push-6.columns.text-center
-      iframe.map(frameBorder='0', src="https://a.tiles.mapbox.com/v4/mck-.#{mapID}/attribution,zoompan.html?access_token=pk.eyJ1IjoibWNrLSIsImEiOiJRdG9HWTVVIn0.IzrqLZSvEp_M_DpwQWIJdA")
+      iframe.map(frameBorder='0', src="https://a.tiles.mapbox.com/v4/mck-.#{mapID}/attribution,zoompan.html?access_token=pk.eyJ1IjoibWNrLSIsImEiOiJRdG9HWTVVIn0.IzrqLZSvEp_M_DpwQWIJdA##{zoom}/#{lat}/#{lng}")
       .show-for-medium-up
         h2= exactTime
 
@@ -24,27 +24,32 @@ mixin event(day, month, title, location, exactTime, mapID)
         .text-center
           h1 Events
 
-    +event("27", "February", "TEDx Delft 2015 - Netherlands", "TU Delft Aula Congrescentrum", "Friday February 27, 2015, 2 p.m. CET", "hk74pcik")
+    +event("27", "February", "TEDx Delft 2015 - Netherlands", "TU Delft Aula Congrescentrum", "Friday February 27, 2015, 2 p.m. CET", "hk74pcik", "16", "52.002215", "4.373459")
       p In her first ever TEDtalk - <i>Newcomers in the Old World</i> - Suzanne Ma encourages us not only to welcome newcomers, but to take every opportunity to  <i>become</i> newcomers ourselves.
 
       p <a href="http://www.tedxdelft.nl/2014/12/tedxdelft-speakers-suzanne-ma-newcomers-in-the-old-world/">Read more</a>
 
       p <a href="http://www.tedxdelft.nl/tickets/">Buy tickets now</a>
 
-    +event("08", "March", "Book Launch - Vancouver", "Sun Yat-Sen Classical Chinese Garden", "Sunday March 8, 2015, 2 p.m. PT", "kij7cjpb")
+    +event("08", "March", "Book Launch - Vancouver", "Sun Yat-Sen Classical Chinese Garden", "Sunday March 8, 2015, 2 p.m. PT", "kij7cjpb", "16", "49.279753", "-123.103791")
       p A party to celebrate the launch of Meet Me in Venice! Want to know what it takes to become a published author? Curious to know more about the Chinese in Italy?
       p Come listen to Suzanne speak about her amazing five-year journey tracking migrants from China to Italy, and be the first to see an exclusive exhibition of Suzanne’s photographs on Chinese immigrant life on display in the Hall of One Hundred Rivers.
       p Light refreshments will be served.
-      p RSVP: <a href="mailto:book@suzannema.com">book@suzannema.com</a>
+      p <a href="https://www.facebook.com/events/704357872995121/">Please RSVP here</a>
 
-    +event("02-30", "March", "Photo Exhibition - Vancouver", "Sun Yat-Sen Classical Chinese Garden", "From March 2 to March 30, 2015", "kij7cjpb")
+    +event("02-30", "March", "Photo Exhibition - Vancouver", "Sun Yat-Sen Classical Chinese Garden", "From March 2 to March 30, 2015", "kij7cjpb", "16", "49.279753", "-123.103791")
       p In this intimate photo exhibition, journalist and author Suzanne Ma gives us a rare and exclusive behind-the-scenes look at the Chinese immigrant experience in Europe.
       p The photos, taken over the past five years, brings us to a town in eastern China with a remarkable 300-year history of migration to the West. From there, we follow the town's migrants on their journey to Europe's factories, kitchens and farms.
 
-    +event("24", "April", "Book Talk  - New York", "Asian Research Institute - CUNY", "Friday April 24, 2015, 6 p.m. EST", "kij9511d")
+    +event("24", "April", "Book Talk  - New York", "Asian Research Institute - CUNY", "Friday April 24, 2015, 6 p.m. EST", "kij9511d", "15", "40.754896", "-73.981665")
       p In this appearance, Suzanne will draw parallels between the Chinese experience in Italy and the Chinese-American experience and talk about the challenges she faced reporting and researching her book in China and in Europe. She will tackle some hard questions: Is life better in the West? And why do so many Chinese immigrants (the largest diaspora in the world) continue to seek better lives outside of China?
 
       p <a href="http://www.eventbrite.com/e/meet-me-in-venice-a-chinese-immigrants-journey-from-the-far-east-to-the-faraway-west-registration-14897629210">Please RSVP here</a>
 
-    +event("27", "April", "Book Reading  - New York", "Asian American Writer's Workshop", "Monday April 27, 2015, 7 p.m. EST", "knb5mb23")
-      p Suzanne will be making an appearance at the <a href="http://aaww.org/about">Asian American Writer's Workshop</a>! Stay tuned for details!
+    +event("27", "April", "Book Reading  - New York", "Asian American Writer's Workshop", "Monday April 27, 2015, 7 p.m. EST", "knb5mb23", "15", "40.745521", "-73.991729")
+      p Suzanne will be making an appearance at the <a href="http://aaww.org/about">Asian American Writer's Workshop</a>! A joint book reading and Q&A with Val Wang, author of <a href="http://www.valwang.com/beijing-bastard/">BEIJING BASTARD</a>.
+
+    +event("02", "May", "Book Event  - Toronto", "North York Public Library", "Saturday May 02, 2015, 2 p.m. EST", "kij7cjpb", 16, "43.7681264927845", "-79.41440463066101")
+      p To celebrate Asian Heritage Month, Suzanne returns to her <a href="http://www.torontopubliclibrary.ca/detail.jsp?Entt=RDMEVT190789&R=EVT190789">hometown library</a>, where she spent hours reading and writing as a child and student, to talk about MEET ME IN VENICE, the Chinese diaspora, and becoming an author.
+
+      p <a href="https://www.facebook.com/events/684517878327690">Please RSVP here</a>
